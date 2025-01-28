@@ -1,0 +1,14 @@
+@use "helpers" as *;
+
+:root {
+  --color-light: #f2f6f9;
+  --color-white: #fff;
+  --color-accent: #f62e1c;
+  --color-dark-blue: #020b2c;
+
+  --font-family-base: "Archivo", sans-serif;
+  --font-family-accent: "Roboto", sans-serif;
+
+  --container-width: #{rem(1440)};
+  --container-padding-x: #{rem(20)};
+}

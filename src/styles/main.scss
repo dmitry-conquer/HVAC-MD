@@ -1,0 +1,23 @@
+@use "reset";
+@use "fonts";
+@use "variables";
+@use "utils";
+@use "globals";
+@use "helpers" as *;
+
+@use './blocks/experts.scss';
+@use './blocks/checklist.scss';
+@use './blocks/bh.scss';
+@use './blocks/button.scss';
+@use './blocks/row-section.scss';
+@use './blocks/services-columns.scss';
+
+@import '/node_modules/glightbox/dist/css/glightbox.min.css';
+
+.plyr__control.plyr__control--overlaid {
+  background: var(--color-accent);
+}
+.plyr__progress input, .plyr__volume input {
+  color: var(--color-accent) !important;
+}
+

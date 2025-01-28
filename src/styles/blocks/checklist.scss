@@ -1,0 +1,115 @@
+@use "../helpers" as *;
+
+.checklist {
+  padding: fluid(40, 95) 0;
+  &__container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+  }
+  &__row {
+    display: flex;
+    column-gap: 43px;
+    align-items: center;
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      row-gap: 34px;
+      align-items: stretch;
+    }
+  }
+  &__content {
+    flex: 0 1 53%;
+    @media (max-width: 1024px) {
+      flex: 0 1 100%;
+    }
+    p:first-child {
+      color: var(--color-accent);
+      font-weight: 700;
+      font-size: fluid(18, 22);
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-weight: 900;
+      font-size: fluid(30, 40);
+      color: #000;
+      line-height: 1;
+      margin-bottom: 16px;
+      @media (max-width: 640px) {
+        br {
+          display: none;
+        }
+      }
+    }
+    p {
+      font-family: var(--font-family-accent);
+      font-size: fluid(20, 25);
+      line-height: 1.2;
+      @media (max-width: 640px) {
+        br {
+          display: none;
+        }
+      }
+    }
+    strong {
+      display: block;
+      margin: 13px 0;
+    }
+    ul {
+      margin-top: 12px;
+      margin-bottom: 20px;
+      li {
+        font-family: var(--font-family-accent);
+        color: #000;
+        font-weight: 700;
+        font-size: fluid(18, 24);
+        position: relative;
+        display: flex;
+        align-items: center;
+        column-gap: 13px;
+        &::before {
+          content: "";
+          width: 26px;
+          height: 26px;
+          flex-shrink: 0;
+          background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none"%3E%3Ccircle cx="12.8893" cy="12.944" r="12.8893" fill="%23EC1721"/%3E%3Cpath d="M18.7492 7.10555C14.6188 9.68159 10.6025 14.5499 10.6025 14.5499C9.78377 13.7059 8.9187 12.9071 8.01127 12.1573C7.77329 11.9608 7.4704 11.8582 7.16076 11.8693C6.85111 11.8805 6.55651 12.0044 6.33352 12.2175C6.11052 12.4305 5.97483 12.7176 5.95249 13.0236C5.93015 13.3296 6.02274 13.6331 6.21249 13.8756C7.50408 15.5392 8.62753 17.3243 9.56666 19.2054C9.66837 19.4076 9.82444 19.578 10.0177 19.698C10.2109 19.8179 10.4339 19.8827 10.6619 19.8853C10.89 19.8878 11.1144 19.828 11.3103 19.7124C11.5062 19.5967 11.6661 19.4298 11.7724 19.23C14.3412 14.4445 16.5658 11.7618 19.6631 8.14183C19.7719 8.01482 19.8311 7.85336 19.8299 7.6868C19.8287 7.52023 19.7672 7.35962 19.6566 7.23416C19.5459 7.1087 19.3935 7.02671 19.227 7.00311C19.0605 6.97951 18.891 7.01586 18.7492 7.10555Z" fill="white"/%3E%3C/svg%3E');
+          background-size: contain;
+          background-repeat: no-repeat;
+          @media (max-width: 640px) {
+            width: 20px;
+            height: 20px;
+          }
+        }
+        &:last-child {
+          margin-top: 12px;
+          padding-left: 37px;
+          &::before {
+            display: none;
+          }
+        }
+      }
+    }
+    a.button {
+      
+    }
+  }
+  &__image {
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+  }
+  &__arrow {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    width: 300px;
+    height: 150px;
+    transform: translateX(-50%);
+    @media (max-width: 1024px) {
+      display: none;
+    }
+  }
+}
