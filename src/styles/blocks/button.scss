@@ -9,10 +9,48 @@
   border: 1px solid var(--color-accent);
   transition: all 0.3s ease;
   border-radius: 40px;
-  padding: rem(18) rem(60);
+  padding: fluid(14, 18) fluid(30, 60);
   display: inline-block;
+  text-align: center;
   @include hover {
     background-color: var(--color-white);
     color: var(--color-accent);
+  }
+  @include x-small {
+    width: 100%;
+  }
+}
+
+.to-top {
+  position: fixed;
+  right: rem(30);
+  bottom: rem(30);
+  width: rem(50);
+  height: rem(50);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d8000e;
+  border-radius: 50%;
+  @include hide;
+  transition: 0.3s;
+  z-index: 10;
+  color: var(--color-white);
+  @include small {
+    width: rem(40);
+    height: rem(40);
+    right: rem(16);
+    bottom: rem(16);
+  }
+  svg {
+    width: rem(24);
+    height: rem(24);
+    @include small {
+      width: rem(20);
+      height: rem(20);
+    }
+  }
+  &.is-visible {
+    @include show;
   }
 }

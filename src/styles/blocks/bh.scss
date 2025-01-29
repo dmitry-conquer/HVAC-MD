@@ -27,21 +27,20 @@
 }
 
 .top-bh {
-  background: rgb(255, 255, 255);
   background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 100%);
-  padding: fluid(50, 100) 0 fluid(50, 143) 0;
+  padding: fluid(30, 100) 0 fluid(70, 143) 0;
 
   &__container {
-    max-width: 1500px;
+    max-width: rem(1500);
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 rem(20);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    column-gap: 50px;
-    @media (max-width: 1200px) {
+    column-gap: rem(50);
+    @include large {
       flex-direction: column;
-      row-gap: 30px;
+      row-gap: rem(30);
       align-items: stretch;
     }
   }
@@ -51,7 +50,7 @@
     row-gap: rem(12);
     flex: 0 1 rem(520);
     color: #fff;
-    @media (max-width: 1200px) {
+    @include large {
       flex: 0 1 auto;
     }
     p {
@@ -60,10 +59,10 @@
     }
   }
   &__form {
-    flex: 0 1 609px;
+    flex: 0 1 rem(609);
     border-radius: 8px;
     overflow: hidden;
-    @media (max-width: 1200px) {
+    @include large {
       flex: 0 1 100%;
     }
   }
@@ -74,7 +73,7 @@
     display: flex;
     align-items: center;
     padding: 0 rem(40);
-    @media (max-width: 640px) {
+    @include small {
       padding: 0 rem(20);
     }
     h2 {
@@ -92,38 +91,36 @@
   }
   &__form-body {
     padding: fluid(20, 40);
-    padding-bottom: 20px;
+    padding-bottom: rem(20);
     background-color: #fff;
   }
 }
 
 .bottom-bh {
+  padding-bottom: rem(40);
   &__container {
-    max-width: 1500px;
+    max-width: rem(1500);
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 rem(20);
     display: flex;
-    @media (max-width: 1200px) {
+    @include large {
       flex-direction: column;
-      row-gap: 30px;
+      row-gap: rem(30);
       align-items: center;
     }
   }
   &__content {
-    flex: 0 1 715px;
+    flex: 0 1 rem(715);
     color: #fff;
-    @media (max-width: 1200px) {
+    @include large {
       flex: 0 1 auto;
     }
     h2 {
       font-size: fluid(35, 50);
-      font-weight: 700;
       line-height: 1.15;
-      margin-bottom: 26px;
+      margin-bottom: rem(26);
     }
     p {
-      font-size: 16px;
-      color: var(--color-light);
       line-height: 1.7;
     }
   }

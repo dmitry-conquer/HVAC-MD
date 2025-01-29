@@ -11,13 +11,14 @@
 @use './blocks/button.scss';
 @use './blocks/row-section.scss';
 @use './blocks/services-columns.scss';
+@use './blocks/allinone.scss';
+@use './blocks/glightbox.scss';
+@use './blocks/logos.scss';
+@use './blocks/achievements.scss';
 
+@import '/node_modules/aos/dist/aos.css';
 @import '/node_modules/glightbox/dist/css/glightbox.min.css';
+@import '/node_modules/lenis/dist/lenis.css';
 
-.plyr__control.plyr__control--overlaid {
-  background: var(--color-accent);
-}
-.plyr__progress input, .plyr__volume input {
-  color: var(--color-accent) !important;
-}
+
 

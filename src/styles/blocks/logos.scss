@@ -1,0 +1,32 @@
+@use "../helpers" as *;
+
+.logos {
+  padding: fluid(40, 100) 0;
+  &__title {
+    margin-bottom: fluid(45, 60);
+    text-align: center;
+    color: var(--color-dark);
+  }
+  &__list {
+  }
+}
+
+.logos-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: rem(20);
+  @include small {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  &__item {
+    flex: 0 1 rem(200);
+    img {
+      max-height: rem(130);
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+}

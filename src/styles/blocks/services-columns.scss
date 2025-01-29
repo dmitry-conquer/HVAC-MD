@@ -1,59 +1,40 @@
 @use "../helpers" as *;
 
 .services-columns {
+  background-color: var(--color-light);
   padding: fluid(40, 90) 0;
 }
 
-.services-columns__container {
-  margin: 0 auto;
-  max-width: 1440px;
-  padding: 0 15px;
-}
 .services-columns__title {
-  margin-bottom: 40px;
+  margin-bottom: rem(40);
 }
 .services-columns__list {
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
   align-items: stretch;
-  -webkit-column-gap: 15px;
-  -moz-column-gap: 15px;
-  column-gap: 15px;
-  -ms-flex-wrap: wrap;
+  column-gap: rem(15);
   flex-wrap: wrap;
   justify-content: center;
-  row-gap: 20px;
+  row-gap: rem(20);
 }
 .services-columns-item,
 .services-columns__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 .services-columns-item {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 400px;
-  flex: 0 0 400px;
-  -ms-flex-direction: column;
+  flex: 0 0 rem(340);
   flex-direction: column;
+  @include small {
+    flex: 0 1 auto;
+  }
 }
 .services-columns-item__header {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   background-color: #ec1721;
-  -webkit-column-gap: 28px;
-  -moz-column-gap: 28px;
-  column-gap: 28px;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  column-gap: rem(28);
   display: flex;
-  min-height: 95px;
-  padding: 10px 22px;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
+  min-height: rem(95);
+  padding: rem(10) rem(22);
+  border-top-left-radius: rem(12);
+  border-top-right-radius: rem(12);
 }
 .services-columns-item__title {
   color: #fff;
@@ -63,24 +44,13 @@
   font-size: fluid(21, 23);
 }
 .services-columns-item__text {
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
   background-color: #fff;
   color: #555;
   flex-grow: 1;
-  font-size: calc(14.90244px + 0.29268vw);
-  padding: 17px 27px 40px 30px;
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
-  border: 1px solid red;
-}
-
-@media (max-width: 768px) {
-  .services-columns-item {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 1 auto;
-    flex: 0 1 auto;
-  }
+  padding: rem(17) rem(27) rem(40) rem(30);
+  border-bottom-left-radius: rem(12);
+  border-bottom-right-radius: rem(12);
+  border: rem(1) solid red;
 }
 
 .services-columns-item__link {
@@ -91,9 +61,11 @@
   color: inherit;
 }
 
-@media (max-width: 640px) {
-  .services-columns-item__image {
-    height: 40px;
-    width: 40px;
+.services-columns-item__image {
+  height: rem(50);
+  width: rem(50);
+  @include x-small {
+    height: rem(40);
+    width: rem(40);
   }
 }

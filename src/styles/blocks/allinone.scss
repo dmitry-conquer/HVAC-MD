@@ -1,2 +1,118 @@
 @use "../helpers" as *;
 
+.allinone {
+  background: linear-gradient(275.64deg, #001253 0.87%, #930007 98.32%);
+}
+
+.allinone__list {
+  margin-left: 0 !important;
+  margin-bottom: rem(16) !important;
+}
+.allinone {
+  padding: fluid(40, 80) 0;
+}
+.allinone__content {
+  column-gap: rem(70);
+  row-gap: rem(20);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: rem(20);
+  @include medium {
+    grid-template-columns: 1fr;
+  }
+}
+.allinone__content {
+  align-items: center;
+  margin-bottom: rem(40);
+}
+.allinone__content-left {
+  display: flex;
+  flex-direction: column;
+}
+.allinone__logos {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.allinone__logo {
+  height: auto;
+}
+.allinone__logos-separator {
+  flex-shrink: 0;
+}
+.allinone__title {
+  color: #fff;
+  line-height: 1.1;
+  text-align: left;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+.allinone__title-top {
+  font-size: fluid(60, 100);
+}
+
+.allinone__video-wrapper {
+  border: rem(10) solid #fff;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.allinone__video {
+  height: 100%;
+  width: 100%;
+}
+.allinone__lists {
+  column-gap: rem(17);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  @include medium {
+    grid-template-columns: 1fr;
+  }
+}
+.allinone__item {
+  align-items: center;
+  background-color: #ffffff13;
+  border-radius: 5px;
+  column-gap: rem(26);
+  display: flex;
+  padding: rem(10) rem(18);
+  @include x-small {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: rem(8);
+  }
+}
+.allinone__item:not(:last-child) {
+  margin-bottom: rem(16);
+}
+.item-mobile-menu:not(:last-child),
+.item-mobile-menu__subitem:not(:last-child) {
+  margin-bottom: rem(6);
+}
+.allinone__item-image {
+  flex-shrink: 0;
+  img {
+    height: rem(26);
+    width: rem(26);
+    object-fit: contain;
+  }
+}
+.allinone__item-title {
+  color: #fff;
+  font-size: fluid(22, 27);
+  line-height: 1.2;
+  margin-bottom: 0 !important;
+}
+.allinone__item-text {
+  color: #fdbcbc;
+  font-size: fluid(18, 20);
+  line-height: 1.2;
+  opacity: 0.7;
+}
+
+.allinone__logos {
+  margin-bottom: rem(20);
+}
+
+.allinone__title-bottom {
+  font-size: fluid(36, 47);
+}

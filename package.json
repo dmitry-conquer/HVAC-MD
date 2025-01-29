@@ -36,7 +36,11 @@
     "vite-plugin-handlebars": "^2.0.0"
   },
   "dependencies": {
+    "@types/aos": "^3.0.7",
+    "aos": "^2.3.4",
+    "countup.js": "^2.8.0",
     "glightbox": "^3.3.1",
+    "lenis": "^1.1.20",
     "typed.js": "^2.1.0"
   }
 }

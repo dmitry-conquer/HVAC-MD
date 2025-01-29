@@ -1,9 +1,14 @@
 @use "helpers" as *;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-family-base);
-  font-size: 1rem;
+  font-size: fluid(16, 18);
 }
+
 .wrapper {
   overflow: hidden;
   position: relative;
@@ -17,7 +22,6 @@ h5, .h5,
 h6, .h6 {
   font-weight: bold;
   line-height: 1.2;
-  color: var(--color-white);
   margin-bottom: fluid(20, 30);
 }
 
