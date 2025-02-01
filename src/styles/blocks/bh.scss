@@ -57,6 +57,9 @@
       line-height: 1.7;
       color: var(--color-light);
     }
+     h1 {
+      margin-bottom: 0;
+     }
   }
   &__form {
     flex: 0 1 rem(609);

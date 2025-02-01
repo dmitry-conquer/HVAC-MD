@@ -20,7 +20,7 @@
   display: flex;
 }
 .services-columns-item {
-  flex: 0 0 rem(340);
+  flex: 0 0 rem(394);
   flex-direction: column;
   @include small {
     flex: 0 1 auto;
@@ -41,16 +41,16 @@
   font-weight: 700;
   line-height: 1;
   margin-bottom: 0;
-  font-size: fluid(21, 23);
+  font-size: fluid(22, 25);
 }
 .services-columns-item__text {
-  background-color: #fff;
   color: #555;
   flex-grow: 1;
   padding: rem(17) rem(27) rem(40) rem(30);
   border-bottom-left-radius: rem(12);
   border-bottom-right-radius: rem(12);
   border: rem(1) solid red;
+  font-size: fluid(17, 19);
 }
 
 .services-columns-item__link {
