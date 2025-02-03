@@ -24,7 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
   Aos.init({
     once: true,
     duration: 800,
-    offset: 400,
   });
 
   new ToTopButton();

@@ -33,16 +33,16 @@
   }
 }
 .item-expert {
-  width: calc(33.333% - 20px);
+  width: 100%;
   background-color: rgba(255, 255, 255, 0.16);
   border-radius: 8px;
   padding: rem(21) rem(30);
   color: #fff;
-  @include medium {
+  @include above-medium {
     width: calc(50% - 20px);
   }
-  @include small {
-    width: 100%;
+  @include above-small {
+    width: calc(33.333% - 20px);
   }
   &__header {
     display: flex;
