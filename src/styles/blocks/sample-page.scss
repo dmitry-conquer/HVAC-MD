@@ -1,0 +1,8 @@
+@use "../helpers" as *;
+
+
+.sample-page {
+  max-width: rem(1600);
+  padding-top: fluid(30, 55);
+  padding-bottom: fluid(30, 55);
+}

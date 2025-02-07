@@ -1,0 +1,21 @@
+@use "../helpers" as *;
+
+.thankyou-page {
+  padding: 0 rem(20);
+  color: #2c2c2c;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  &__button-wrapper {
+  }
+  h1 {
+    margin-bottom: rem(20);
+  }
+  h2 {
+    font-size: fluid(24, 32);
+  }
+}

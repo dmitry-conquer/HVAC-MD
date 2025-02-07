@@ -3,6 +3,7 @@
 @use "variables";
 @use "utils";
 @use "globals";
+@use "typography";
 @use "helpers" as *;
 
 @use './blocks/experts.scss';
@@ -15,6 +16,9 @@
 @use './blocks/glightbox.scss';
 @use './blocks/logos.scss';
 @use './blocks/achievements.scss';
+@use './blocks/sample-page.scss';
+@use './blocks/thankyou-page.scss';
+@use './blocks/footer.scss';
 
 @import '/node_modules/aos/dist/aos.css';
 @import '/node_modules/glightbox/dist/css/glightbox.min.css';

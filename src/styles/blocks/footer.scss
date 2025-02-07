@@ -1,0 +1,15 @@
+@use "../helpers" as *;
+
+.footer {
+  background-color: var(--color-dark);
+  padding: rem(20) 0;
+  &__content {
+    text-align: center;
+    color: var(--color-white);
+    a {
+      @include hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
