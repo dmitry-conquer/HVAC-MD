@@ -4,6 +4,8 @@ import GLightbox from "glightbox";
 import Aos from "aos";
 import Lenis from "lenis";
 import ToTopButton from "./components/toTopButton";
+//@ts-expect-error ignore useDynamicAdapt
+import { useDynamicAdapt } from "./dynamicAdapt";
 
 document.addEventListener("DOMContentLoaded", () => {
   const target = document.getElementById("hero-typed");
@@ -36,6 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
     lenis.raf(time);
     requestAnimationFrame(raf);
   }
-
   requestAnimationFrame(raf);
+
+  useDynamicAdapt();
 });
