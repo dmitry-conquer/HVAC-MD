@@ -1,0 +1,128 @@
+@use "../helpers" as *;
+
+.blog {
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 35%;
+    column-gap: fluid(20, 70);
+    @include medium {
+      grid-template-columns: 1fr;
+      row-gap: rem(20);
+    }
+  }
+  &__main {
+    padding-top: fluid(30, 100);
+  }
+  &__post {
+    &:not(:last-child) {
+      margin-bottom: fluid(70, 90);
+    }
+  }
+  &__sidebar {
+    background-color: var(--color-light);
+    padding-inline: fluid(20, 50);
+    padding-top: fluid(40, 100);
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 300%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: var(--color-light);
+      z-index: -1;
+      @include medium {
+        display: none;
+      }
+    }
+    @include medium {
+      padding: rem(30);
+    }
+  }
+  &__search {
+    margin-bottom: rem(35);
+  }
+  &__search-form {
+    background-color: var(--color-white);
+    border: rem(1) solid var(--color-gray);
+    border-radius: rem(40);
+    padding: rem(14) rem(40);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: border-color 0.3s ease;
+    column-gap: rem(20);
+    &:focus-within {
+      border-color: var(--color-accent);
+    }
+  }
+  &__search-input {
+    outline: none;
+    width: 100%;
+  }
+  &__search-button {
+    margin: -16px;
+    padding: 16px;
+  }
+  &__sidebar-section {
+    margin-bottom: fluid(30, 40);
+  }
+  &__sidebar-title {
+    font-size: rem(20);
+    margin-bottom: fluid(16, 20);
+  }
+  &__sidebar-list {
+  }
+  &__sidebar-item {
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
+  &__sidebar-link {
+    transition: color 0.3s ease;
+    @include hover {
+      color: var(--color-accent);
+    }
+  }
+}
+
+.post-article {
+  --post-child-gap: #{rem(30)};
+  @include small {
+    --post-child-gap: #{rem(18)};
+  }
+  &__link {
+    display: block;
+    margin-bottom: rem(30);
+  }
+  &__image {
+  }
+  &__title {
+    line-height: 1;
+    margin-bottom: 0;
+    margin-bottom: rem(10);
+    a {
+      transition: all 0.3s ease;
+      font-size: fluid(24, 30);
+      @include hover {
+        color: var(--color-accent);
+      }
+    }
+  }
+  &__info {
+    margin-bottom: var(--post-child-gap);
+    color: var(--color-gray);
+    font-size: rem(16);
+  }
+  &__excerpt {
+    margin-bottom: var(--post-child-gap);
+    font-size: rem(16);
+  }
+  &__button {
+    line-height: 1.2;
+    font-size: rem(16);
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+}

@@ -1,0 +1,11 @@
+@use "../helpers" as *;
+
+.single-article {
+  &__info {
+    color: var(--color-gray);
+  }
+  &__thumbnail {
+  }
+  &__content {
+  }
+}

@@ -1,0 +1,33 @@
+@use "../helpers" as *;
+
+.blog-pagination {
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: rem(14);
+    padding: rem(50) 0;
+  }
+
+ li span, li a{
+    font-size: rem(20);
+    min-width: rem(35);
+    min-height: rem(35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-light);
+    padding: 0 rem(3);
+    transition: all .3s ease;
+    @include hover {
+      &:not(.dots) {
+        background-color: var(--color-accent);
+        color: var(--color-white);
+      }
+    }
+  }
+  .current {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+  }
+}

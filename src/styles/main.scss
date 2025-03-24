@@ -6,23 +6,32 @@
 @use "typography";
 @use "helpers" as *;
 
-@use './blocks/experts.scss';
-@use './blocks/checklist.scss';
-@use './blocks/bh.scss';
-@use './blocks/button.scss';
-@use './blocks/row-section.scss';
-@use './blocks/services-columns.scss';
-@use './blocks/allinone.scss';
-@use './blocks/glightbox.scss';
-@use './blocks/logos.scss';
-@use './blocks/achievements.scss';
-@use './blocks/sample-page.scss';
-@use './blocks/thankyou-page.scss';
-@use './blocks/footer.scss';
+@use "./blocks/experts.scss";
+@use "./blocks/checklist.scss";
+@use "./blocks/bh.scss";
+@use "./blocks/button.scss";
+@use "./blocks/row-section.scss";
+@use "./blocks/services-columns.scss";
+@use "./blocks/allinone.scss";
+@use "./blocks/glightbox.scss";
+@use "./blocks/logos.scss";
+@use "./blocks/achievements.scss";
+@use "./blocks/blog.scss";
+@use "./blocks/pagination.scss";
+@use "./blocks/simple-hero.scss";
+@use "./blocks/sample-page.scss";
+@use "./blocks/single-article.scss";
+@use "./blocks/thankyou-page.scss";
+@use "./blocks/footer.scss";
 
-@import '/node_modules/aos/dist/aos.css';
-@import '/node_modules/glightbox/dist/css/glightbox.min.css';
-@import '/node_modules/lenis/dist/lenis.css';
+@import "/node_modules/aos/dist/aos.css";
+@import "/node_modules/glightbox/dist/css/glightbox.min.css";
+@import "/node_modules/lenis/dist/lenis.css";
 
-
-
+.breadcrumb {
+  margin-bottom: 20px;
+  font-size: clamp(0.875rem, 0.7835rem + 0.3902vw, 1.125rem);
+  .breadcrumb_last {
+    color: red;
+  }
+}
