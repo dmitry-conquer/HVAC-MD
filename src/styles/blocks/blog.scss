@@ -12,6 +12,7 @@
   }
   &__main {
     padding-top: fluid(30, 100);
+    padding-bottom: fluid(30, 60);
   }
   &__post {
     &:not(:last-child) {
@@ -45,7 +46,7 @@
   }
   &__search-form {
     background-color: var(--color-white);
-    border: rem(1) solid var(--color-gray);
+    border: rem(1) solid var(--color-light-gray);
     border-radius: rem(40);
     padding: rem(14) rem(40);
     display: flex;
@@ -72,8 +73,6 @@
     font-size: rem(20);
     margin-bottom: fluid(16, 20);
   }
-  &__sidebar-list {
-  }
   &__sidebar-item {
     &:not(:last-child) {
       margin-bottom: rem(10);
@@ -84,6 +83,90 @@
     @include hover {
       color: var(--color-accent);
     }
+  }
+  &__single-tags {
+    margin-bottom: fluid(30, 40);
+  }
+  &__single-tags-title {
+    margin-bottom: 0;
+    font-size: rem(18);
+    display: inline;
+  }
+  &__single-tags-list {
+    display: inline;
+    a {
+      transition: color 0.3s ease;
+      color: var(--color-light-gray);
+      text-decoration: underline;
+      @include hover {
+        color: var(--color-accent);
+      }
+    }
+  }
+  &__single-share {
+    border-radius: rem(12);
+    border: rem(1) solid var(--color-light-gray);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: rem(12);
+    padding: rem(10) rem(15);
+    margin-bottom: fluid(30, 40);
+  }
+  &__single-share-title {
+    color: var(--color-light-light-gray);
+  }
+  &__single-share-list {
+    display: flex;
+    column-gap: rem(5);
+    align-items: center;
+    a {
+      color: var(--color-light-gray);
+      @include hover {
+        color: var(--color-accent);
+      }
+      svg {
+        transition: all 0.3s ease;
+        width: rem(26);
+        height: rem(26);
+      }
+    }
+  }
+  &__related-title {
+    font-size: fluid(24, 26);
+    margin-bottom: rem(20);
+  }
+  &__related-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(rem(200), 1fr));
+    gap: rem(20);
+  }
+  &__related-article {
+    padding: rem(14);
+    background-color: var(--color-white);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  &__related-article-link {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(16);
+    @include hover {
+      h3 {
+        color: var(--color-accent);
+      }
+    }
+  }
+  &__related-article-image {
+    width: 100%;
+    height: rem(210);
+    object-fit: cover;
+    object-position: center;
+  }
+  &__related-article-title {
+    transition: color 0.3s ease;
+    font-size: fluid(20, 22);
+    margin-bottom: 0;
   }
 }
 
@@ -112,7 +195,7 @@
   }
   &__info {
     margin-bottom: var(--post-child-gap);
-    color: var(--color-gray);
+    color: var(--color-light-gray);
     font-size: rem(16);
   }
   &__excerpt {
