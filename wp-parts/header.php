@@ -16,6 +16,7 @@
     <?php $header_logo = get_field('header_logo', 'option'); ?>
     <?php $header_menu = get_field('header_menu', 'option'); ?>
     <?php $header_button = get_field('header_button', 'option'); ?>
+    <?php $socials = get_field('socials', 'option'); ?>
     <?php $is_flexible_template = is_page_template('templates/flexible.php'); ?>
 
     <header class="cheader <?php echo !$is_flexible_template ? 'cheader_static' : ''; ?>" data-js-header>
@@ -73,9 +74,20 @@
             </nav>
             <div class="mobile-body__footer">
               <?php if ($header_button && is_array($header_button)): ?>
-            <a href="<?php echo esc_url($header_button['url']); ?>"
-              class="mobile-body__footer-button"><?php echo $header_button['title']; ?></a>
-          <?php endif; ?>
+                <a href="<?php echo esc_url($header_button['url']); ?>"
+                  class="mobile-body__footer-button"><?php echo $header_button['title']; ?></a>
+              <?php endif; ?>
+              <?php if ($socials): ?>
+                <div class="mobile-body__social">
+                  <?php foreach ($socials as $item): ?>
+                    <a href="<?php echo esc_url($item['link']['url']); ?>"
+                      title="<?php echo esc_html($item['link']['title']); ?>" target="_blank" rel="noopener"
+                      class="mobile-body__social-link">
+                      <?php echo wp_get_attachment_image($item['icon'], 'full', false, ['loading' => 'lazy', 'class' => 'mobile-body__social-icon']); ?>
+                    </a>
+                  <?php endforeach; ?>
+                </div>
+              <?php endif; ?>
             </div>
           </div>
         </div>
