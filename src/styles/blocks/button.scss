@@ -19,6 +19,9 @@
   @include x-small {
     width: 100%;
   }
+  &_sm {
+    padding: fluid(8, 12) fluid(16, 28);
+  }
 }
 
 .to-top {

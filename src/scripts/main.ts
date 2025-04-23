@@ -4,10 +4,13 @@ import GLightbox from "glightbox";
 import Aos from "aos";
 import Lenis from "lenis";
 import ToTopButton from "./components/toTopButton";
+import Header from "./components/header";
 //@ts-expect-error ignore useDynamicAdapt
 import { useDynamicAdapt } from "./dynamicAdapt";
 
 document.addEventListener("DOMContentLoaded", () => {
+  new Header();
+
   const target = document.getElementById("hero-typed");
   if (target) {
     const words = target?.dataset.typed?.split(",");

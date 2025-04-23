@@ -4,6 +4,8 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  &__container {
+  }
   &__logo {
     margin-bottom: 30px;
     width: 100%;
@@ -42,6 +44,8 @@
     justify-content: space-between;
     align-items: center;
     column-gap: rem(50);
+    padding-top: fluid(180, 200);
+
     @include large {
       flex-direction: column;
       row-gap: rem(30);

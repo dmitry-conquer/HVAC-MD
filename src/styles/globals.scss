@@ -2,11 +2,19 @@
 
 html {
   scroll-behavior: smooth;
+  &.is-lock {
+    overflow: hidden;
+    height: 100vh !important;
+  }
 }
 
 body {
   font-family: var(--font-family-base);
   font-size: fluid(16, 18);
+  &.is-lock {
+    overflow: hidden;
+    height: 100vh !important;
+  }
 }
 
 .wrapper {
@@ -16,6 +24,7 @@ body {
 
 main {
   overflow: hidden;
+  
 }
 
 h1, .h1, //
