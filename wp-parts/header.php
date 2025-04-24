@@ -37,6 +37,18 @@
               </ul>
             </nav>
           <?php endif; ?>
+          <?php if ($socials && is_array($socials) && !empty($socials)): ?>
+            <div class="cheader__socials">
+              <?php foreach ($socials as $item): ?>
+                <a href="<?php echo esc_url($item['link']['url']); ?>"
+                  title="<?php echo esc_html($item['link']['title']); ?>" target="_blank" rel="noopener"
+                  class="cheader__social-link">
+                  <?php echo wp_get_attachment_image($item['icon'], 'full', false, ['class' => 'cheader__social-icon']); ?>
+                </a>
+              <?php endforeach; ?>
+            </div>
+          <?php endif; ?>
+
           <?php if ($header_button && is_array($header_button)): ?>
             <a href="<?php echo esc_url($header_button['url']); ?>"
               class="cheader__cta button button_sm"><?php echo $header_button['title']; ?></a>

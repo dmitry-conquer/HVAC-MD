@@ -22,6 +22,10 @@
     position: relative;
     transition: all 0.3s ease;
     text-align: center;
+    transition: color 0.3s ease;
+    @include hover {
+      color: #ec1721;
+    }
     &.next-sub-list {
       &::after {
         content: "";
@@ -111,6 +115,24 @@
     width: 100%;
     height: 100%;
   }
+  &__socials {
+    display: flex;
+    align-items: center;
+    column-gap: rem(10);
+    @include small {
+      display: none;
+    }
+  }
+  &__social-link {
+    transition: transform 0.3s ease;
+    @include hover {
+      transform: scale(1.1);
+    }
+  }
+  &__social-icon {
+    width: rem(30);
+    height: rem(30);
+  }
   &__cta {
     @include x-small {
       display: none;
@@ -189,7 +211,6 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
-
   }
 }
 
@@ -197,7 +218,7 @@
   padding: rem(10) 0;
   &:not(:last-child) {
     margin-bottom: 6px;
-    border-bottom: 1px solid rgb(255 255 255 / .3);
+    border-bottom: 1px solid rgb(255 255 255 / 0.3);
   }
   &_has-submenu {
     & > .item-mobile-menu__link {
