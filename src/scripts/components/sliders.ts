@@ -3,6 +3,7 @@ declare const Swiper: any;
 
 export default class Slider {
   constructor() {
+    if (typeof Swiper === "undefined") return;
     this.initRecentProjectsSlider();
   }
 

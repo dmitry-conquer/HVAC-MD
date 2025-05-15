@@ -18,8 +18,9 @@
     <?php $header_button = get_field('header_button', 'option'); ?>
     <?php $socials = get_field('socials', 'option'); ?>
     <?php $is_flexible_template = is_page_template('templates/flexible.php'); ?>
+    <?php $static_header = get_field('static_header'); ?>
 
-    <header class="cheader <?php echo !$is_flexible_template ? 'cheader_static' : ''; ?>" data-js-header>
+    <header class="cheader <?php echo $static_header ? 'cheader_static' : ''; ?> <?php echo !$is_flexible_template ? 'cheader_static' : ''; ?>" data-js-header>
       <div class="cheader__container">
         <div class="cheader__body">
           <a href="/" class="cheader__logo-wrapper">
