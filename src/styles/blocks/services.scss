@@ -1,0 +1,94 @@
+@use "../helpers" as *;
+
+.services-module {
+  background: linear-gradient(275.64deg, #001253 0.87%, #930007 98.32%);
+  padding-bottom: calc(48.20961px + 3.1441vw);
+  padding-top: calc(32.13974px + 2.09607vw);
+}
+.services-module__container {
+  margin: 0 auto;
+  max-width: 1600px;
+  padding: 0 16px;
+}
+.services-module__header {
+  margin: 0 auto 37px;
+  max-width: 1200px;
+}
+.services-module__title {
+  color: #fff;
+  font-size: calc(29.37991px + 0.69869vw);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 8px;
+  text-align: center;
+}
+.services-module__text {
+  color: #fff;
+  font-size: calc(18.36245px + 0.43668vw);
+  text-align: center;
+}
+.services-module__list {
+  display: -ms-grid;
+  display: grid;
+  gap: 16px;
+  grid-auto-rows: 131px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.item-services-module {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #ffffff29;
+  border-radius: 8px;
+  -webkit-column-gap: 16px;
+  -moz-column-gap: 16px;
+  column-gap: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 25px;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+.item-services-module:hover {
+  background-color: #ec1721;
+}
+.item-services-module:hover .item-services-module__icon {
+  display: none;
+}
+.item-services-module:hover .item-services-module__icon-hover {
+  display: block;
+}
+.item-services-module__icon,
+.item-services-module__icon-hover {
+  height: 43px;
+  -o-object-fit: contain;
+  object-fit: contain;
+  width: 43px;
+}
+.item-services-module__icon-hover {
+  display: none;
+}
+.item-services-module__title {
+  color: #fff;
+  font-size: calc(19.34498px + 0.17467vw);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+
+@media (min-width: 1520px) {
+  .services-module {
+    padding-bottom: 96px;
+    padding-top: 64px;
+  }
+  .services-module__title {
+    font-size: 40px;
+  }
+  .services-module__text {
+    font-size: 25px;
+  }
+  .item-services-module__title {
+    font-size: 22px;
+  }
+}

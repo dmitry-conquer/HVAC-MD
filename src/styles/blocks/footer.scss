@@ -2,9 +2,31 @@
 
 .footer {
   background-color: var(--color-dark);
-  padding: rem(20) 0;
+  padding: fluid(30, 50) 0 rem(20);
+  &__container {
+    max-width: rem(1200);
+    margin: 0 auto;
+    padding: 0 rem(20);
+  }
   &__body {
     margin-bottom: rem(50);
+    display: flex;
+    align-items: flex-start;
+    gap: rem(40) fluid(20, 60);
+    justify-content: flex-start;
+    @include x-small {
+      flex-direction: column;
+      align-items: center;
+      justify-content: stretch;
+    }
+  }
+  &__logo-wrapper {
+  }
+  &__logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    max-width: fluid(150, 200);
   }
   &__location {
   }
@@ -16,13 +38,15 @@
     margin-bottom: rem(24);
   }
   &__location-list {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
     gap: rem(40) rem(50);
     justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    @include small {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
   &__location-item {
-    flex: 0 0 rem(300);
   }
   &__location-item-title {
     color: var(--color-white);
