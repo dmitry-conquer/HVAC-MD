@@ -46,4 +46,8 @@ document.addEventListener("DOMContentLoaded", () => {
   requestAnimationFrame(raf);
 
   useDynamicAdapt();
+
+
+
+  console.log("Hello World");
 });
