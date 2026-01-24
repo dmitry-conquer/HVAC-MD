@@ -1,0 +1,75 @@
+@use "../helpers" as *;
+
+.hero {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-block: fluid(160, 263) fluid(60, 140);
+
+  &__container {
+    max-width: rem(1203);
+  }
+
+  &__logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: fluid(12, 24);
+    margin-bottom: fluid(60, 80);
+  }
+
+  &__logo {
+    max-height: rem(90);
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: fluid(60, 80);
+  }
+
+  &__title {
+    text-align: center;
+    color: var(--color-white);
+    font-size: fluid(40, 64);
+    margin-bottom: rem(32);
+  }
+
+  &__button {
+  }
+
+  &__numbers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: rem(32);
+  }
+
+  &__number {
+    display: flex;
+    align-items: center;
+    column-gap: rem(16);
+    justify-content: center;
+  }
+
+  &__number-value {
+    color: var(--color-white);
+    text-align: center;
+    font-size: fluid(40, 60);
+    font-weight: 700;
+    line-height: 1;
+    min-width: rem(150);
+  }
+
+  &__number-text {
+    color: var(--color-accent);
+    font-size: fluid(16, 24);
+    font-weight: 500;
+    line-height: 1.05;
+    max-width: rem(160);
+  }
+}

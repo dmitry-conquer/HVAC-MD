@@ -28,6 +28,9 @@
 @use "./blocks/services";
 @use "./blocks/testimonials";
 @use "./blocks/recent-projects";
+@use "./blocks/hero";
+@use "./blocks/back-top-button";
+@use "./blocks/feature-list";
 
 @import "/node_modules/aos/dist/aos.css";
 @import "/node_modules/glightbox/dist/css/glightbox.min.css";

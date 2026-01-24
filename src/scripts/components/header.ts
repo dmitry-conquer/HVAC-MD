@@ -1,4 +1,4 @@
-export class Header {
+class Header {
   private readonly selectors: Record<string, string> = {
     root: "[data-js-header]",
     overlay: "[data-js-header-overlay]",

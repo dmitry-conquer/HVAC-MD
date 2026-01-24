@@ -3,15 +3,16 @@ import Typed from "typed.js";
 import GLightbox from "glightbox";
 import Aos from "aos";
 import Lenis from "lenis";
-import ToTopButton from "./components/toTopButton";
-import Header from "./components/header";
-import Slider from "./components/sliders";
+import { Header, Slider, Counter, BackTopButton } from "./components";
+
 //@ts-expect-error ignore useDynamicAdapt
 import { useDynamicAdapt } from "./dynamicAdapt";
 
 document.addEventListener("DOMContentLoaded", () => {
   new Header();
   new Slider();
+  new Counter();
+  new BackTopButton();
 
   const target = document.getElementById("hero-typed");
   if (target) {
@@ -32,8 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
     once: true,
     duration: 800,
   });
-
-  new ToTopButton();
 
   const lenis = new Lenis({
     anchors: true,

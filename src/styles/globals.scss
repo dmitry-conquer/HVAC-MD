@@ -24,7 +24,6 @@ body {
 
 main {
   overflow: hidden;
-  
 }
 
 h1, .h1, //
@@ -36,6 +35,10 @@ h6, .h6 {
   font-weight: bold;
   line-height: 1.2;
   margin-bottom: fluid(20, 30);
+
+  span {
+    color: var(--color-accent);
+  }
 }
 
 h1,
@@ -51,6 +54,11 @@ h2,
 h3,
 .h3 {
   font-size: fluid(28, 35);
+}
+
+h4,
+.h4 {
+  font-size: fluid(20, 24);
 }
 
 .container-base {

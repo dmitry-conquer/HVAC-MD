@@ -9,7 +9,7 @@
   border: 1px solid var(--color-accent);
   transition: all 0.3s ease;
   border-radius: 40px;
-  padding: fluid(14, 18) fluid(30, 60);
+  padding: rem(12) fluid(30, 60);
   display: inline-block;
   text-align: center;
   @include hover {
@@ -22,6 +22,21 @@
   &_sm {
     padding: fluid(8, 12) fluid(16, 28);
   }
+
+  &--transparent {
+    background-color: transparent;
+    border-color: var(--color-white);
+    @include hover {
+      background-color: var(--color-accent);
+      border-color: var(--color-accent);
+      color: var(--color-white);
+    }
+
+    &:active {
+      border-color: var(--color-white) !important;
+    }
+  }
+
 }
 
 .to-top {
