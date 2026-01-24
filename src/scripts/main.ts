@@ -3,7 +3,7 @@ import Typed from "typed.js";
 import GLightbox from "glightbox";
 import Aos from "aos";
 import Lenis from "lenis";
-import { Header, Slider, Counter, BackTopButton } from "./components";
+import { Header, Slider, Counter, BackTopButton, Accordion } from "./components";
 
 //@ts-expect-error ignore useDynamicAdapt
 import { useDynamicAdapt } from "./dynamicAdapt";
@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   new Slider();
   new Counter();
   new BackTopButton();
+  new Accordion();
 
   const target = document.getElementById("hero-typed");
   if (target) {

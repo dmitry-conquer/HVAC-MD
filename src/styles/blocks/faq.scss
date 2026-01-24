@@ -1,0 +1,119 @@
+@use "../helpers" as *;
+
+.faq {
+  padding-block: fluid(40, 80);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: rem(24);
+
+    @include large {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  }
+
+  &__content {
+    max-width: rem(426);
+
+    @include large {
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    color: var(--color-white);
+    margin-bottom: 0;
+
+    @include large {
+      text-align: center;
+    }
+  }
+
+  &__accordion {
+    width: 100%;
+    max-width: rem(844);
+    border-radius: 16px;
+    background: rgba(85, 85, 85, 0.1);
+    backdrop-filter: blur(4px);
+    padding: fluid(20, 60);
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid(12, 24);
+
+    @include large {
+      max-width: 100%;
+    }
+  }
+
+  &__accordion-item {
+  }
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(85, 85, 85, 0.2);
+  padding-bottom: fluid(20, 40);
+
+  &__title {
+    margin-bottom: 0;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    column-gap: rem(24);
+    justify-content: space-between;
+    width: 100%;
+    text-align: left;
+
+    &.is-active {
+      .faq-item__button-icon {
+        transform: rotate(-180deg);
+        color: var(--color-accent);
+      }
+      .faq-item__button-text {
+        color: var(--color-accent);
+      }
+    }
+
+    &-text {
+      color: var(--color-white);
+      font-weight: 400;
+      font-size: fluid(18, 20);
+      line-height: 1.3;
+      transition: color 0.3s ease;
+    }
+    &-icon {
+      flex: 0 0 fluid(16, 20);
+      height: fluid(16, 20);
+      color: var(--color-white);
+    }
+  }
+
+  &__button-text {
+  }
+
+  &__button-icon {
+    color: var(--color-white);
+    transition: color 0.3s ease;
+  }
+
+  &__content {
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    max-height: 0;
+  }
+
+  &__content-inner {
+    padding-top: fluid(18, 30);
+    color: var(--color-light-gray);
+    font-size: rem(16);
+    line-height: 1.3;
+  }
+}
