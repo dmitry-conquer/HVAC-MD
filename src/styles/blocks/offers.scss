@@ -40,10 +40,7 @@
     gap: rem(8) rem(16);
     padding-block: rem(8);
     align-items: flex-start;
-
-    &:not(:last-child) {
-      border-bottom: 1px solid rgba(85, 85, 85, 0.2);
-    }
+    border-bottom: 1px solid rgba(85, 85, 85, 0.2);
 
     @include x-small {
       flex-direction: column;

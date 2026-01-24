@@ -29,7 +29,6 @@
     @include small {
       gap: rem(15);
     }
-  
   }
 }
 .item-expert {
@@ -39,10 +38,10 @@
   padding: rem(21) rem(30);
   color: #fff;
   @include above-medium {
-    width: calc(50% - 20px);
+    width: calc(33.333% - 20px);
   }
   @include above-small {
-    width: calc(33.333% - 20px);
+    width: calc(50% - 20px);
   }
   &__header {
     display: flex;
