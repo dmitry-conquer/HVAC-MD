@@ -47,7 +47,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
   useDynamicAdapt();
 
-
-
-  console.log("Hello World");
 });

@@ -1,5 +1,7 @@
 @use "../helpers" as *;
 .offers {
+  background-color: var(--color-light);
+
   &__container {
     display: grid;
     grid-template-columns: 55% 45%;
