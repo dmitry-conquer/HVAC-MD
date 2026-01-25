@@ -42,12 +42,19 @@
       visibility: hidden;
       transition: all 0.3s ease;
       li {
+
+        &.current-menu-item {
+          & > a {
+            color: var(--color-accent);
+          }
+        }
+
         a {
           display: block;
           padding: rem(5) rem(16);
 
           @include hover {
-            color: var(--color-white);
+            color: var(--color-white) !important;
             background-color: var(--color-accent);
           }
         }
