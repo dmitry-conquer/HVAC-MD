@@ -58,7 +58,10 @@
 
 .faq-item {
   border-bottom: 1px solid rgba(85, 85, 85, 0.2);
-  padding-bottom: fluid(20, 40);
+  transition: border-color 0.3s ease;
+  @include hover {
+    border-color: var(--color-accent-transparent);
+  }
 
   &__title {
     margin-bottom: 0;
@@ -71,6 +74,7 @@
     justify-content: space-between;
     width: 100%;
     text-align: left;
+    padding-bottom: fluid(16, 30);
 
     &.is-active {
       .faq-item__button-icon {
@@ -111,9 +115,9 @@
   }
 
   &__content-inner {
-    padding-top: fluid(18, 30);
     color: var(--color-light-gray);
     font-size: rem(16);
     line-height: 1.3;
+    padding-bottom: fluid(20, 40);
   }
 }

@@ -35,10 +35,6 @@ h6, .h6 {
   font-weight: bold;
   line-height: 1.2;
   margin-bottom: fluid(20, 30);
-
-  span {
-    color: var(--color-accent);
-  }
 }
 
 h1,
@@ -49,6 +45,10 @@ h1,
 h2,
 .h2 {
   font-size: fluid(32, 40);
+
+  &:not(.allinone__title) span {
+    color: var(--color-accent);
+  }
 }
 
 h3,
